@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Handwritten Digit Recognition</title>
+        <link rel="icon" type="image/svg" sizes="32x32" href="{{url_for('static',filename='images/icon.svg')}}" />
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script defer src="{{url_for('static',filename='js/script.js')}}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h2 class="heading__sub">IBM Project</h2>
+                <h1 class="heading__main">Handwrten Digit Recognizer</h1>
+            </div>
+            <div class="sub_container3">
+                <h2>Team Id: </h2>
+                <b>&emsp;&emsp;PNT2022TMID09252</p></b>
+                <br>
+                <h2>Team Members:</h2>
+                <h3>
+                <b>&emsp;&emsp;Deepakraj R</p></b>
+                <b>&emsp;&emsp;Eshwanth G M</p></b>
+                <b>&emsp;&emsp;Jisho J</p></b>
+                <b>&emsp;&emsp;Kaarthic Varun K</p></b>
+                </h3>
+                <br><br><br><hr size="6" width="60%" color="white"><br>
+                <h1>&ensp;A NOVEL</h1>
+                <h1>&ensp;METHOD FOR</h1>
+                <h1>&ensp;HANDWRITTEN</h1>
+                <h1>&ensp;DIGIT</h1>
+                <h1>&ensp;RECOGNITION</h1>
+                <h1>&ensp;SYSTEM</h1>
+            </div>
+            <div class="upload-container">
+                <div class="form-wrapper">
+                    <form class="upload" action="/predict" method="post" enctype="multipart/form-data">
+                        <label id="label" for="upload-image"><i data-feather="file-plus"></i>Select File</label>
+                        <input type="file" name="photo" id="upload-image" hidden />
+                        <button type="submit" id="up_btn"></button>
+                    </form>
+                    <img id="loading" src="{{url_for('static',filename='images/loading.gif')}}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
